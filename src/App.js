@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Burger from "comps/burger/Burger";
+import CityDetail from "comps/city-detail/CityDetail";
+import Features from "comps/features/Features";
+import Footer from "comps/footer/Footer";
+import MainSlider from "comps/main-slider/MainSlider";
+import Menu from "comps/menu/Menu";
+import Navbar from "comps/navbar/Navbar";
+import PriceOffer from "comps/price-offer/PriceOffer";
+import Promo from "comps/promo/Promo";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Menu />
+      <Navbar />
+      <Burger />
+      <main>
+        <MainSlider />
+        <PriceOffer />
+        <Promo />
+        <Features />
+        <CityDetail />
+        <Footer />
+      </main>
+    </>
   );
 }
 

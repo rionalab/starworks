@@ -1,0 +1,18 @@
+
+$color-dark-teal : #0f2a31;
+$container: 85%;
+
+
+$zindex-burger              : 99;
+$zindex-popupFullScreen     : 120;
+
+
+@mixin rect($size) {
+    width: $size;
+    height: $size;
+}
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}

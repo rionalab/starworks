@@ -1,3 +1,4 @@
+import Style from './PromoSlider.module.scss'
 import Slider from 'react-slick'
 import RoundedTopThumb from 'comps/rounded-top-thumb/RoundedTopThumb'
 import ImagePromotion1 from 'assets/images/img1.jpg'
@@ -5,7 +6,7 @@ import ImagePromotion2 from 'assets/images/img2.jpg'
 import ImagePromotion3 from 'assets/images/img3.jpg'
 import ImagePromotion4 from 'assets/images/img4.jpg'
 import ButtonArrow from 'comps/button/ButtonArrow'
-import PromoThumb from 'comps/promo-thumb/PromoThumb'
+import PromoThumb from 'comps/promo-slider/PromoThumb'
 
 export default function PromoSlider() {
 
@@ -47,7 +48,7 @@ export default function PromoSlider() {
     ]
 
     return (
-        <div className="promo-slider">
+        <div className={Style.promoSlider}>
             <ButtonArrow direction="left" color="white" />
             <ButtonArrow direction="right" color="white" />
             {

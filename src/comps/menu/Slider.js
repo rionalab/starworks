@@ -13,8 +13,7 @@ export default function Slider() {
 
     return (
         <div className="menu-fullscreen-slider">
-            <ButtonArrow className="slider-nav" direction="top" color="white" />
-            <ButtonArrow className="slider-nav" direction="down" color="white" />
+
             <div className="slider-c">
                 <RoundedTopThumb {...promoThumbProps} />
             </div>

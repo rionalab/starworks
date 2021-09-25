@@ -1,18 +1,18 @@
-import React from 'react'
+import Style from './Navbar.module.scss'
 
 export default function Navbar() {
     return (
-        <nav className="navbar">
-            <div className="container">
-                <div className="logo">
-                    <a href="/">StarTRAVELER</a>
+        <nav className={Style.navbar}>
+            <div className={Style.container}>
+                <div className={Style.logo}>
+                    <a className={Style.logoText} href="/">StarTRAVELER</a>
                 </div>
-                <div className="links">
-                    <a href="/">Benefit</a>
-                    <a href="/">Price</a>
-                    <a href="/">Features</a>
-                    <a href="/">Membership</a>
-                    <a href="/">Review</a>
+                <div className={Style.links}>
+                    <a className={Style.linkItem} href="/">Benefit</a>
+                    <a className={Style.linkItem} href="/">Price</a>
+                    <a className={Style.linkItem} href="/">Features</a>
+                    <a className={Style.linkItem} href="/">Membership</a>
+                    <a className={Style.linkItem} href="/">Review</a>
                 </div>
             </div>
         </nav>

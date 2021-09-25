@@ -1,0 +1,25 @@
+.mainSlider {
+    margin-bottom: 100px;
+    cursor: grab;
+    :global(.slick-slide) {
+        overflow: hidden;
+    }
+    :global(.slick-active) {
+        :global(.globalCaption) {
+            & > div {
+                animation: fadeUp 1.2s ease-out forwards;
+            }
+        }
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translate(180px, 25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(180px, 0);
+    }
+}

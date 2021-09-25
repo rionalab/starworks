@@ -7,23 +7,26 @@ import Menu from "comps/menu/Menu";
 import Navbar from "comps/navbar/Navbar";
 import PriceOffer from "comps/price-offer/PriceOffer";
 import Promo from "comps/promo/Promo";
+import MainContextProvider from "context/MainContext";
 
 function App() {
-  return (
-    <>
-      <Menu />
-      <Navbar />
-      <Burger />
-      <main>
-        <MainSlider />
-        <PriceOffer />
-        <Promo />
-        <Features />
-        <CityDetail />
-        <Footer />
-      </main>
-    </>
-  );
+    return (
+        <>
+            <MainContextProvider>
+                <Menu />
+                <Navbar />
+                <Burger />
+                <main>
+                    {/* <MainSlider />
+                    <PriceOffer />
+                    <Promo />
+                    <Features />
+                    <CityDetail />
+                    <Footer /> */}
+                </main>
+            </MainContextProvider>
+        </>
+    );
 }
 
 export default App;

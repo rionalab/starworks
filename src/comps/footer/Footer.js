@@ -1,16 +1,17 @@
 import Facebook from 'assets/images/facebook.png';
 import Twitter from 'assets/images/twitter.png';
 import Instagram from 'assets/images/instagram.png';
+import Style from './Footer.module.scss'
 
 export default function Footer() {
     return (
         <footer>
-            <div className="container">
-                <div className="top">
-                    <div className="logo">
+            <div className={Style.container}>
+                <div className={Style.top}>
+                    <div className={Style.logo}>
                         <h1>StarTRAVELER</h1>
                     </div>
-                    <div className="links">
+                    <div className={Style.links}>
                         <div>
                             <h2>destinations</h2>
                             <ul>
@@ -69,13 +70,13 @@ export default function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div className="sosmed">
+                    <div className={Style.sosmed}>
                         <a href="/"><img src={Facebook} alt="" /></a>
                         <a href="/"><img src={Twitter} alt="" /></a>
                         <a href="/"><img src={Instagram} alt="" /></a>
                     </div>
                 </div>
-                <div className="bottom">
+                <div className={Style.bottom}>
                     <p>&copy; 2021 StarTRAVELER, Inc. ALl rights reserved.</p>
                     <div>
                         <a href="/">Guides</a>

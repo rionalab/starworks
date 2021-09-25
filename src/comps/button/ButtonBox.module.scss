@@ -1,0 +1,56 @@
+.btnBox {
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    column-gap: 15px;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px 50px;
+    transition: all 1s;
+    background: transparent;
+    opacity: .8;
+    box-sizing: border-box;
+    &:hover {
+        opacity: 1;
+        transition: all 0.3s;
+        div {
+            animation: slideRight .8s;
+        }
+        span {
+            opacity: 1;
+            transition: all 0.3s;
+        }
+    }
+    &.dark {
+        border-color: #111;
+        div {
+            background: #111;
+        }
+        span {
+            color: black;
+        }
+    }
+    div {
+        width: 100%;
+        height: 1px;
+        background: white;
+    }
+    span {
+        font-size: 15px;
+        text-align: left;
+        font-weight: 500;
+        transition: all 1s;
+        color: white;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        width: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        width: 100%;
+        transform: translateX(0px);
+    }
+}

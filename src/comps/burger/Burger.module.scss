@@ -1,0 +1,35 @@
+@import 'assets/css/var';
+
+
+.burger {
+    width: 100px;
+    cursor: pointer;
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    z-index: $zindex-burger;
+    &:hover {
+        & > div {
+            transition: all .2s;
+            &:nth-child(1) {
+                transform: translateY(-3px);
+            }
+            &:nth-child(2) {
+                transform: translateY(3px);
+            }
+        }
+    }
+    & > div {
+        transition: all .6s;
+        height: 1px;
+        &:nth-child(1) {
+            width: 85px;
+            margin-bottom: 10px;
+            background: $color-dark-teal;
+        }
+        &:nth-child(2) {
+            width: 50px;
+            background: $color-dark-teal;
+        }
+    }
+}

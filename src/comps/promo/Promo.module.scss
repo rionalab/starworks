@@ -1,0 +1,115 @@
+@import 'assets/css/var';
+
+.promo {
+    text-align: right;
+    .container {
+        display: inline-block;
+        min-height: 100vh;
+        width: calc(100vw - 200px);
+        background: $color-dark-teal;
+        padding: 10% 5%;
+        box-sizing: border-box;
+        text-align: left;
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 80px;
+            &> div {
+                &:nth-child(1) {
+                    font-family: 'Syne', sans-serif;
+                    color: white;
+                    font-size: 30px;
+                    line-height: 70px;
+                }
+                &:nth-child(2) {
+                    font-family: 'Poppins', sans-serif;
+                    color: white;
+                    font-size: 16px;
+                    opacity: 0.8;
+                    p {
+                        line-height: 32px;
+                    }
+                }
+                &:nth-child(3) {
+                    font-family: 'Poppins', sans-serif;
+                    color: white;
+                    font-size: 16px;
+                    opacity: 0.8;
+                    & > div {
+                        display: grid;
+                        margin-top: 10%;
+                        grid-template-columns: auto  1fr;
+                        column-gap: 24px;
+                        justify-items: start;
+                        align-items: center;
+                        span {
+                            text-transform: uppercase;
+                            font-weight: 200;
+                            letter-spacing:2px;
+                        }
+                    }
+
+                }
+            }
+        }
+        .content {
+            min-height: 500px;
+            width: 100%;
+        }
+        .footer {
+            display: grid;
+            margin-top: 100px;
+            grid-template-columns: 1fr 1fr;
+            & > div {
+                &:nth-child(1) {
+                    p {
+                        &.quote {
+                            margin-bottom: 24px;
+                            font-family: 'Poppins', sans-serif;
+                            color: white;
+                            font-weight: 100;
+                            font-size: 26px;
+                            opacity: .7;
+                            line-height: 32px;
+                            position: relative;
+                            img {
+                                position: absolute;
+                                top: -35px;
+                                z-index: -1;
+                                opacity: .4;
+                                left: 0;
+                                width: 50px;
+                            }
+                        }
+                        &.name {
+                            display: grid;
+                            grid-template-columns: 50px 1fr;
+                            align-items: center;
+                            column-gap: 10px;
+                            span {
+                                &:nth-child(2) {
+                                    font-family: 'Poppins', sans-serif;
+                                    color: white;
+                                    font-weight: 500;
+                                    font-size: 12px;
+                                    text-transform: uppercase;
+                                }
+                                &:nth-child(1) {
+                                    height: 1px;
+                                    width: 100%;
+                                    background-color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    text-align: right;
+                    button {
+                        display: inline-grid;
+                    }
+                }
+            }
+        }
+    }
+}

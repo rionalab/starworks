@@ -1,10 +1,10 @@
+import Style from './MainSlider.module.scss'
 import Slider from 'react-slick'
-import RoundedTopThumb from 'comps/rounded-top-thumb/RoundedTopThumb'
 import ImagePromotion1 from 'assets/images/img1.jpg'
 import ImagePromotion2 from 'assets/images/img2.jpg'
 import ImagePromotion3 from 'assets/images/img3.jpg'
 import ImagePromotion4 from 'assets/images/img4.jpg'
-import ButtonArrow from 'comps/button/ButtonArrow'
+import MainSliderItem from './MainSliderItem'
 
 export default function MainSlider() {
 
@@ -14,7 +14,7 @@ export default function MainSlider() {
         speed: 500,
         slidesToShow: 1,
         centerMode: true,
-        centerPadding: 200,
+        centerPadding: 0,
         slidesToScroll: 1
     };
 
@@ -25,11 +25,6 @@ export default function MainSlider() {
             theme: 'dark',
             buttonLabel: 'Explore More',
             image: ImagePromotion1,
-            imageDesc: {
-                title: 'Roma, Italia',
-                url: '/',
-                description: 'San Francisco was founded in 1776 by the Spanish',
-            },
             description: "San Francisco was founded in 1776 by the Spanish conquerors. It was called Hierba Buena which is Spanish for Good Herb."
         }, {
             title: "Los Angeles",
@@ -56,15 +51,11 @@ export default function MainSlider() {
     ]
 
     return (
-        <div className="main-slider">
+        <div className={Style.mainSlider}>
             <Slider {...settings}>
                 {
-                    mainSliders.map(item => (
-                        <div className="main-slider-item" key={item.title}>
-                            <ButtonArrow className="slider-nav" direction="left" color="dark" />
-                            <ButtonArrow className="slider-nav" direction="right" color="dark" />
-                            <RoundedTopThumb {...item} />
-                        </div>
+                    mainSliders.map((item, i) => (
+                        <MainSliderItem {...item} key={i} />
                     ))
                 }
             </Slider>

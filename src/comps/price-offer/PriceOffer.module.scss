@@ -1,0 +1,131 @@
+@import 'assets/css/var';
+
+
+.priceOfferItem {
+    display: grid;
+    grid-template-columns: 1fr 900px;
+    align-items:center;
+    column-gap: 200px;
+    cursor: grab;
+    padding: 100px 0;
+    .caption {
+        padding-left: 180px;
+        box-sizing: border-box;
+        h1 {
+            text-transform: uppercase;
+            font-size: 76px;
+            color: $color-dark-teal;
+            font-family: 'Syne', sans-serif;
+            line-height: 72px;
+            margin-bottom: 32px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            margin-bottom: 72px;
+            font-weight: 300;
+        }
+    }
+    .images {
+        .imagesInner {
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: 100px;
+            align-items: center;
+            grid-template-columns: 600px 500px;
+            & > div {
+                height: 80vh;
+                position: relative;
+                width: 90%;
+
+                &:nth-child(2) {
+                    height: 60vh;
+                }
+                & > button {
+                    @include rect(60px);
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all .6s;
+                    &:hover {
+                        transition: all .3s;
+
+                        &:nth-child(1) {
+                            left: -100px;
+                        }
+                        &:nth-child(2) {
+                            right: -100px;
+                        }
+                    }
+                    &:nth-child(1) {
+                        left: -90px;
+                    }
+                    &:nth-child(2) {
+                        right: -90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.priceOffer {
+    margin-bottom: 100px;
+    :global(.slick-slide) {
+        overflow: hidden;
+    }
+    .slick-active{
+        .price-offer-slider-item {
+            position: relative;
+            .btn-arrow {
+                display: inline-grid !important;
+                position: absolute;
+                z-index:5;
+                transform: translateY(-50%);
+                top: 50%;
+                &:nth-child(1) {
+                    right: 570px;
+                    // @include animationBtnLeft();
+                    &:hover {
+                        transform: translate(-7px, -50%);
+                    }
+                }
+                &:nth-child(2) {
+                    right: 0;
+                    &:hover {
+                        transform: translate(7px, -50%);
+                    }
+                }
+            }
+            .box-thumb {
+                grid-template-columns: 1fr 470px;
+                transform: scale(1);
+                .image {
+                    transform: translateX(-75px);
+                }
+                .caption {
+                    display: block;
+                }
+            }
+        }
+    }
+    .price-offer-slider-item {
+        .btn-arrow {
+            display: none !important;
+        }
+        .box-thumb {
+            transform: scale(.7) translateX(-200px);
+            grid-template-columns: 470px;
+            .caption {
+                display: none;
+                h1 {
+                    text-transform: uppercase;
+                }
+            }
+            .image {
+                // transform: translateX(200px);
+            }
+        }
+    }
+}

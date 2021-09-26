@@ -95,10 +95,10 @@
                 height: 210px;
             }
             &:nth-child(3) {
-                height: 250px;
+                height: 290px;
             }
             &:nth-child(4) {
-                height: 300px;
+                height: 360px;
             }
             &:nth-child(5) {
                 height: 80vh;
@@ -189,7 +189,6 @@
 }
 
 
-
 @keyframes fadeIn {
     0% {
 
@@ -198,7 +197,6 @@
         opacity: 1
     }
 }
-
 @keyframes fadeRight {
     0% {
         opacity: 0;
@@ -217,5 +215,124 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@media only screen and (max-width: 767.98px) {
+    .cityDetail {
+        .description {
+            width: 100vw;
+            padding: 40px;
+            p {
+                font-size: 13px;
+            }
+            a {
+                width: 40px;
+                height: 50px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cityDetail {
+        .close {
+            top:20px;
+            right: 20px;
+            @include rect(50px);
+            .closeInner {
+                & > div {
+                    width: 40px;
+                }
+            }
+        }
+        .gallery {
+            column-gap: 20px;
+            grid-template-columns:160px 180px 200px 220px 400px;
+            & > div {
+                &:nth-child(5) {
+                    height: 75vh;
+                    button {
+                     @include rect(45px);
+                    }
+                }
+            }
+        }
+        .description {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 13px;
+            }
+            a {
+                width: 40px;
+                margin-top: 40px;
+                height: 42px;
+                img {
+                    width: 13px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .cityDetail {
+        .close {
+            top:60px;
+            right: 60px;
+            @include rect(60px);
+            .closeInner {
+                & > div {
+                    width: 60px;
+                }
+            }
+        }
+        .gallery {
+            column-gap: 30px;
+            grid-template-columns:170px 200px 230px 260px 450px;
+        }
+    }
+}
+@media only screen and (min-width: 1900px) {
+    .cityDetail {
+        .close {
+            top:60px;
+            right: 60px;
+            @include rect(60px);
+            .closeInner {
+                & > div {
+                    width: 60px;
+                }
+            }
+        }
+        .gallery {
+            column-gap: 70px;
+            grid-template-columns:170px 200px 250px 280px .8fr;
+            & > div {
+                &:nth-child(5) {
+                    button {
+                     @include rect(60px);
+                    }
+                }
+            }
+        }
+        .description {
+            h1 {
+                font-size: 52px;
+            }
+            p {
+                font-size: 18px;
+            }
+            a {
+                margin-top: 70px;
+                width: 60px;
+                height: 70px;
+                img {
+                    width: 20px;
+                }
+            }
+        }
     }
 }

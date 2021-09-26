@@ -1,12 +1,24 @@
 @import 'assets/css/var';
 
+@mixin burgerSmall() {
+    .burger {
+        left: unset;
+        right: 20px;
+        top: 40px;
+    }
+}
+@mixin burgerBig() {
+    .burger {
+        left: 40px;
+        top: 50%;
+    }
+}
+
 
 .burger {
     width: 100px;
     cursor: pointer;
     position: fixed;
-    left: 40px;
-    top: 50%;
     z-index: $zindex-burger;
     &:hover {
         & > div {
@@ -30,6 +42,48 @@
         &:nth-child(2) {
             width: 50px;
             background: $color-dark-teal;
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 599.98px) {
+    @include burgerSmall();
+}
+@media only screen and (min-width: 600px) {
+    @include burgerSmall();
+}
+@media only screen and (min-width: 768px) {
+    @include burgerBig();
+}
+@media only screen and (min-width: 1200px) {
+    .burger {
+        left: 30px;
+        & > div {
+            &:nth-child(1) {
+                width: 65px;
+            }
+            &:nth-child(2) {
+                width: 40px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1900px) {
+    .burger {
+        left: 40px;
+        & > div {
+            &:nth-child(1) {
+                width: 85px;
+                margin-bottom: 10px;
+                background: $color-dark-teal;
+            }
+            &:nth-child(2) {
+                width: 50px;
+                background: $color-dark-teal;
+            }
         }
     }
 }

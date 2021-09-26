@@ -1,6 +1,8 @@
 .mainSlider {
     margin-bottom: 100px;
     cursor: grab;
+    width: 100vw;
+    overflow: hidden;
     :global(.slick-slide) {
         overflow: hidden;
     }
@@ -12,14 +14,48 @@
         }
     }
 }
-
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translate(180px, 25px);
+@media only screen and (max-width: 767.98px) {
+    .mainSlider {
+        margin-bottom: 50px;
     }
-    100% {
-        opacity: 1;
-        transform: translate(180px, 0);
+}
+@media only screen and (min-width: 1200px) {
+    .mainSlider {
+        margin-bottom: 0px;
+        :global(.slick-slide) {
+            overflow: hidden;
+        }
+        :global(.slick-active) {
+            :global(.globalCaption) {
+                & > div {
+                    animation: fadeUp 1.2s ease-out forwards;
+                }
+            }
+        }
+    }
+
+    @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translate(140px, 25px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(140px, 0);
+        }
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+
+    @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translate(180px, 25px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(180px, 0);
+        }
     }
 }

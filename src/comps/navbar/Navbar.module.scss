@@ -1,8 +1,13 @@
 @import 'assets/css/var';
 
 .navbar {
-    background: white;
-    padding: 50px 0;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 0 20px;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: $zindex-navbar;
     .container {
         width: $container;
         margin:0 auto;
@@ -54,5 +59,71 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .navbar {
+        padding: 20px 0 20px;
+        .container {
+            .links {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        .container {
+            .links {
+                display: block;
+                .linkItem {
+                    margin-left: 32px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 992px) {
+    .navbar {
+        .container {
+            .links {
+                display: block;
+                .linkItem {
+                    margin-left: 60px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .navbar {
+        .container {
+            .links {
+                display: block;
+                .linkItem {
+                    margin-left: 100px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .navbar {
+        .container {
+            .links {
+                display: block;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1900px) {
+    .navbar {
+        .container {
+            .links {
+                display: block;
+            }
+        }
     }
 }

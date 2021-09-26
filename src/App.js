@@ -17,12 +17,12 @@ function App() {
                 <Navbar />
                 <Burger />
                 <main>
-                    {/* <MainSlider />
+                    <MainSlider />
+                    <CityDetail />
                     <PriceOffer />
                     <Promo />
                     <Features />
-                    <CityDetail />
-                    <Footer /> */}
+                    <Footer />
                 </main>
             </MainContextProvider>
         </>

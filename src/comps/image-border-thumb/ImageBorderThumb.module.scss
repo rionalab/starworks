@@ -105,3 +105,68 @@
         }
     }
 }
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    .ImageBorderThumb {
+        .image {
+            .imageInner {
+                .imageCaption {
+                    h3 {
+                        font-size: 13px;
+                    }
+                    h4 {
+                        font-size: 11px;
+                    }
+                    button {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .ImageBorderThumb {
+        .image {
+            .imageInner {
+                .imageCaption {
+                    h3 {
+                        font-size: 14px;
+                    }
+                    h4 {
+                        font-size: 12px;
+                    }
+                    button {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1900px) {
+    .ImageBorderThumb {
+        .image {
+            .imageInner {
+                .imageCaption {
+                    h3 {
+                        font-size: 16px;
+                    }
+                    h4 {
+                        font-size: 12px;
+                    }
+                    button {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

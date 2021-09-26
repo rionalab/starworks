@@ -61,8 +61,8 @@ export default function PriceOffer() {
         <div className={Style.priceOffer}>
             <Slider {...settings}>
                 {
-                    items.map(item => (
-                        <PriceOfferItem {...item} />
+                    items.map((item, i) => (
+                        <PriceOfferItem key={i} {...item} />
                     ))
                 }
             </Slider >

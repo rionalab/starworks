@@ -41,15 +41,11 @@ $zindex-menu-fullscreen : 100;
 }
 body {
     overflow-x: hidden;
+    padding-top: 130px;
 }
 button {
     cursor: pointer;
 }
-
-
-
-
-
 .rounded-top-thumb {
     position: relative;
     height: 100%;
@@ -168,7 +164,6 @@ background: linear-gradient(180deg, rgba(190,255,0,0) 0%, rgba(15,42,49,.8) 80%)
         }
     }
 }
-
 .box-thumb {
     position: relative;
     width: 100%;
@@ -239,9 +234,6 @@ background: linear-gradient(180deg, rgba(190,255,0,0) 0%, rgba(15,42,49,.8) 80%)
         }
     }
 }
-
-
-
 .btn-arrow {
     @include circle(50px);
     background: transparent;
@@ -292,8 +284,6 @@ background: linear-gradient(180deg, rgba(190,255,0,0) 0%, rgba(15,42,49,.8) 80%)
         }
     }
 }
-
-
 
 @media only screen and (max-width: 599.98px) {
     .navbar .container .logo a {

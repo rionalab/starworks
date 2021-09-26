@@ -1,6 +1,5 @@
 @import 'assets/css/var';
 
-
 .priceOfferItem {
     display: grid;
     grid-template-columns: 1fr 900px;
@@ -13,10 +12,10 @@
         box-sizing: border-box;
         h1 {
             text-transform: uppercase;
-            font-size: 76px;
             color: $color-dark-teal;
             font-family: 'Syne', sans-serif;
             line-height: 72px;
+            font-size: 76px;
             margin-bottom: 32px;
         }
         p {
@@ -125,6 +124,106 @@
             }
             .image {
                 // transform: translateX(200px);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .priceOffer {
+        margin-bottom: 50px;
+        width: 90%;
+        margin:0 auto;
+    }
+    .priceOfferItem {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+        .caption {
+            margin-bottom: 40px;
+            max-width: 90vw;
+            padding: 0;
+            h1 {
+                @include sectionTitleSmall;
+            }
+            p {
+                @include sectionSubtitleSmall;
+                margin-bottom: 24px;
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .priceOfferItem {
+        grid-template-columns: 1fr 900px;
+        column-gap: 150px;
+        .caption {
+            padding-left: 140px;
+            h1 {
+                font-size: 52px;
+                line-height: 56px;
+            }
+            p {
+                font-size: 13px;
+                margin-bottom: 40px;
+            }
+        }
+        .images {
+            .imagesInner {
+                column-gap: 100px;
+                grid-template-columns: 600px 500px;
+
+                & > div {
+                    & > button {
+                        @include rect(45px);
+                        &:nth-child(1) {
+                            left: -70px;
+                        }
+                        &:nth-child(2) {
+                            right: -70px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .priceOfferItem {
+        grid-template-columns: 1fr 900px;
+        column-gap: 200px;
+        .caption {
+            padding-left: 180px;
+            h1 {
+                line-height: 72px;
+                font-size: 76px;
+                margin-bottom: 32px;
+            }
+            p {
+                font-size: 20px;
+                margin-bottom: 72px;
+                font-weight: 300;
+            }
+        }
+        .images {
+            .imagesInner {
+                column-gap: 60px;
+                grid-template-columns: 600px 500px;
+                & > div {
+                    & > button {
+                        @include rect(60px);
+                        &:nth-child(1) {
+                            left: -90px;
+                        }
+                        &:nth-child(2) {
+                            right: -90px;
+                        }
+
+                    }
+                }
             }
         }
     }

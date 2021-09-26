@@ -19,8 +19,8 @@
         h2 {
             text-align: center;
             font-family: 'Poppins', sans-serif;
-            font-size: 20px;
             font-weight: 300;
+            font-size: 20px;
             width: 800px;
             margin: 0 auto;
 
@@ -41,3 +41,101 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 767.98px) {
+    .features {
+        margin-top: 50px;
+        .container {
+            width: 95%;
+            h1 {
+                @include sectionTitleSmall();
+            }
+            h2 {
+                @include sectionSubtitleSmall();
+                text-align: center;
+                width: 90%;
+            }
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                margin-top: 30px;
+                width: 70%;
+                column-gap: 140px;
+                & > div {
+                    position: relative;
+                    cursor: pointer;
+                    height: 450px;
+                    display: none;
+                    &:nth-child(1) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .features {
+        margin-top: 100px;
+        .container {
+            h1 {
+                font-size:54px;
+            }
+            h2 {
+                font-size: 13px;
+                width: 600px;
+                max-width: 100%;
+            }
+            .content {
+                column-gap: 90px;
+                & > div {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .features {
+        margin-top: 100px;
+        .container {
+            h1 {
+                font-size:54px;
+            }
+            h2 {
+                font-size: 13px;
+                width: 600px;
+                max-width: 100%;
+            }
+            .content {
+                column-gap: 90px;
+                & > div {
+                    height: 420px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1900px) {
+    .features {
+        margin-top: 150px;
+        .container {
+            h1 {
+            font-size: 76px;
+            }
+            h2 {
+                max-width: 100%;
+                font-weight: 300;
+                font-size: 20px;
+                width: 800px;
+            }
+            .content {
+            column-gap: 140px;
+                & > div {
+                height: 550px;
+                }
+            }
+        }
+    }
+}
+
